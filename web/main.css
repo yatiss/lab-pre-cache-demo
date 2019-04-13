@@ -5,3 +5,24 @@ body {
 li{
     list-style-type:none;
 }
+button{
+    width: 130px;
+    height: 40px;
+}
+.h-box{
+    display: inline-flex;
+}
+.show-box{
+    border: 1px solid #FF9900;
+    width: 830px;
+    height: 130px;
+    top: 50px;
+    left: 100px;
+    position: absolute;
+}
+.input-cla{
+    width: 500px;
+}
+.se-cla{
+    width: 100px;
+}
