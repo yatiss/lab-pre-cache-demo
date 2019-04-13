@@ -1,0 +1,19 @@
+{
+  "name": "lab-pre-cache-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "jquery-3.2.1.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yatiss/lab-pre-cache-demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yatiss/lab-pre-cache-demo/issues"
+  },
+  "homepage": "https://github.com/yatiss/lab-pre-cache-demo#readme"
+}
