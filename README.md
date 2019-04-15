@@ -1,10 +1,4 @@
-# NOBOOK SDK 实验 demo
-
-appid 与 appSecret 需跟nobook申请,然后在 server.js 里配置
-
-#### sdk及demo项目位置
-* [基础实验SDK](https://github.com/yatiss/nobook-saas-sdk)
-* [基础实验SDK接口API说明](https://github.com/yatiss/nobook-saas-sdk/blob/master/README.md)
+# 预加载服务接口 demo
 
 ## demo运行方式
 ```bash
@@ -16,4 +10,15 @@ $ yarn start
 $ npm i
 $ npm start
 ```
-访问地址 http://localhost:4040/
+访问地址 http://localhost:5555/
+
+访问请求(GET)
+```bash
+http://localhost:3000/start_package?time=XXX&&sign=XXX&&type=XXX&&id=XXX&&email=XXX
+```
+请求参数
+*time：时间戳,精确到秒,如 new Date().getTime() / 1000 >> 0;
+*sign：
+*type：
+*id：
+*email：

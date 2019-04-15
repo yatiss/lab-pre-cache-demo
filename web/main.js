@@ -14,7 +14,7 @@ $(() => {
     });
 
     $('#subId').click(async () => {
-        const {TOKEN} = await (await fetch('token.json')).json();
+        const {TOKEN, FROM} = await (await fetch('config.json')).json();
         const idStr = $('#idInput').val().split(',').map(item => {
             return item.trim();
         }).join(',');
@@ -23,17 +23,17 @@ $(() => {
         console.log('idStr: ', idStr);
         console.log('type: ', type);
         console.log('email: ', email);
-        const url = createTestURL(idStr, type, email, TOKEN);
+        const url = createTestURL(idStr, type, email, TOKEN, FROM);
         console.log('url: ', url);
-        $.get(url);
+        $.get(url)
     });
 });
 
-function createTestURL(idStr, type, email, TOKEN) {
+function createTestURL(idStr, type, email, TOKEN, FROM) {
     const time = getTimestamp();
     console.log(TOKEN, time);
     // --type xxx --id xxx --email xxx
-    const url = `http://localhost:3000/start_package?time=${time}&&sign=${getSign(TOKEN, time)}&&type=${type}&&id=${idStr}&&email=${email}`;
+    const url = `http://localhost:3000/start_package?from=${FROM}&&time=${time}&&sign=${getSign(TOKEN, time)}&&type=${type}&&id=${idStr}&&email=${email}`;
     return url;
 }
 
