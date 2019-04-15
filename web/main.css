@@ -13,9 +13,8 @@ button{
     display: inline-flex;
 }
 .show-box{
+    padding: 10px;
     border: 1px solid #FF9900;
-    width: 830px;
-    height: 130px;
     top: 50px;
     left: 100px;
     position: absolute;
@@ -25,4 +24,8 @@ button{
 }
 .se-cla{
     width: 100px;
+}
+.item-cla {
+    margin-left: 10px;
+    margin-top: 10px;
 }

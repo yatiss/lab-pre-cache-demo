@@ -1,6 +1,6 @@
 $(() => {
     // 初中生物 95aa47b97ebf654b1d093306139d5a61,0e2d924516703409abbdc6131b90af9b,f83f94007123841072a44b7335ed42a8
-
+    // haojinxueqiang@126.com
     //  type: 1物理, 2化学 3初中生物 4高中生物
     const xkArr = [
         {name:'物理', type: 1},
@@ -19,7 +19,7 @@ $(() => {
             return item.trim();
         }).join(',');
         const type = $('#seId').children('option:selected').val();
-        const email = 'haojinxueqiang@126.com'; // 邮箱
+        const email = $('#emailInput').val(); // 邮箱
         console.log('idStr: ', idStr);
         console.log('type: ', type);
         console.log('email: ', email);
