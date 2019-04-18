@@ -17,7 +17,8 @@ $ npm start
 http://pack.nobook.com/start_package?from=XXX&&time=XXX&&sign=XXX&&type=XXX&&id=XXX
 // 返回值
 {
-    code: 0 // 0成功, 1001 失败
+    code: 0, // 0成功, 1001 失败
+    hashid: "edf26bf0b9d27bcbd814d540e66a1de1",
     msg: "启动打包,请耐心等待"
 }
 ```
