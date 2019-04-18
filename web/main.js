@@ -29,10 +29,8 @@ $(() => {
     });
     $('#checkId').click(async () => {
         const {TOKEN, FROM} = await (await fetch('config.json')).json();
-        const idStr = $('#idInput').val().split(',').map(item => {
-            return item.trim(); // 去空格
-        }).join(',');
-        const url = createFindURL(idStr,TOKEN, FROM);
+        const hashid = $('#idInput2').val();
+        const url = createFindURL(hashid,TOKEN, FROM);
         $.get(url).then((data) => {
             console.log('*********data:', data);
         });
@@ -48,13 +46,13 @@ function createTestURL(idStr, type, email, TOKEN, FROM) {
     const url = `http://pack.nobook.com/start_package?from=${FROM}&&time=${time}&&sign=${getSign(TOKEN, time)}&&type=${type}&&id=${idStr}`;
     return url;
 }
-function createFindURL(idStr,TOKEN, FROM) {
+function createFindURL(hashid,TOKEN, FROM) {
     const time = getTimestamp();
     console.log(TOKEN, time);
     // --type xxx --id xxx --email xxx
-    // const url = `http://localhost:3000/test_check_package?time=${time}&&sign=${getSign(TOKEN, time)}&&id=${idStr}`;
-    // const url = `http://192.168.1.191:3000/test_check_package?time=${time}&&sign=${getSign(TOKEN, time)}&&id=${idStr}`;
-    const url = `http://pack.nobook.com/test_check_package?time=${time}&&sign=${getSign(TOKEN, time)}&&id=${idStr}`;
+    const url = `http://localhost:3000/check_package?time=${time}&&sign=${getSign(TOKEN, time)}&&hashid=${hashid}`;
+    // const url = `http://192.168.1.191:3000/check_package?time=${time}&&sign=${getSign(TOKEN, time)}&&hashid=${hashid}`;
+    // const url = `http://pack.nobook.com/check_package?time=${time}&&sign=${getSign(TOKEN, time)}&&hashid=${hashid}`;
     return url;
 }
 
