@@ -50,9 +50,9 @@ function createFindURL(hashid,TOKEN, FROM) {
     const time = getTimestamp();
     console.log(TOKEN, time);
     // --type xxx --id xxx --email xxx
-    const url = `http://localhost:3000/check_package?time=${time}&&sign=${getSign(TOKEN, time)}&&hashid=${hashid}`;
+    // const url = `http://localhost:3000/check_package?time=${time}&&sign=${getSign(TOKEN, time)}&&hashid=${hashid}`;
     // const url = `http://192.168.1.191:3000/check_package?time=${time}&&sign=${getSign(TOKEN, time)}&&hashid=${hashid}`;
-    // const url = `http://pack.nobook.com/check_package?time=${time}&&sign=${getSign(TOKEN, time)}&&hashid=${hashid}`;
+    const url = `http://pack.nobook.com/check_package?time=${time}&&sign=${getSign(TOKEN, time)}&&hashid=${hashid}`;
     return url;
 }
 

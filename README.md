@@ -24,7 +24,7 @@ http://pack.nobook.com/start_package?from=XXX&&time=XXX&&sign=XXX&&type=XXX&&id=
 ```
 查询请求(GET)
 ```bash
-http://pack.nobook.com/test_check_package?time=XXX&&sign=XXX&&type=XXX&&id=XXX
+http://pack.nobook.com/check_package?time=XXX&&sign=XXX&&type=XXX&&hashid=XXX
 // 返回值
 {
     code: 0 // 0成功, 1001 失败
